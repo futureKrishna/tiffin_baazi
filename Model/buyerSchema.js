@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const buyerSchema = new mongoose.Schema({
+const buyerSchema = mongoose.Schema({
   name: { type: String, required: true },
 
   phone: { type: Number, required: true },
@@ -12,5 +12,5 @@ const buyerSchema = new mongoose.Schema({
   cpassword: { type: String, required: true },
 });
 
-const User = new mongoose.model("buyerAuth", buyerSchema);
+const User = mongoose.model("buyerAuth", buyerSchema);
 module.exports = User;

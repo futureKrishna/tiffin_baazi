@@ -1,13 +1,19 @@
 const express = require("express");
-const body_parser = require("body-parser");
 const app = express();
 const conn = require("./Model/dbconnection.js");
+require("dotenv").config();
 
-const PORT = 7000;
+const PORT = 5000;
+
+//accept json
+app.use(express.json())
+
+//accept body
+app.use(express.urlencoded({extended:true}))
 
 app.use(require("./Routes/Route.js"));
 
-app.get("/home", (req, res) => {
+app.get("/home",(req, res) => {
   res.send("this is my home page");
 });
 

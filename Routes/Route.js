@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 const body_parser = require("body-parser");
-const Buser = require("../Model/buyerSchema.js");
-const Suser = require("../Model/sellerSchema.js");
+// const Buser = require("../Model/buyerSchema.js");
+// const Suser = require("../Model/sellerSchema.js");
 const router = express.Router();
 router.use(body_parser.json());
 router.use(body_parser.urlencoded({ extended: true }));
@@ -18,5 +18,7 @@ router.post("/ssignup", Ssignup);
 
 router.post("/blogin", Blogin);
 router.post("/slogin", Slogin);
+
+// router.post("/logout", Logout);
 
 module.exports = router;

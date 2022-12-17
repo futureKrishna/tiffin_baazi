@@ -1,0 +1,4 @@
+1-created api's for different routes
+2-created buyer/seller schemas
+3-stored buyer/seller credentials in the DB
+
